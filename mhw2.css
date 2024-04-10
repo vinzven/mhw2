@@ -1,0 +1,630 @@
+body{
+    width: 100%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto",sans-serif;
+}
+
+/* header */
+#header{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 80px;
+    padding-right: 80px;
+    background: rgb(12, 12, 59);
+    top: 0;
+    left: 0;
+    z-index: 999;
+    position: sticky;
+}
+
+#SH{
+    height: 60px;
+    width: 300px;
+}
+
+#SH-piccolo{
+    display: none;
+}
+
+#LG{
+    height: 35px;
+    width: 35px;
+    margin-right: 35px;
+}
+
+#tendina{
+    display: none;
+}
+
+.hamburger{
+    background-image: url("menu\ a\ tendina.png");
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    background-size: cover;
+    background-color: transparent;
+    border: 0;
+    padding-right: 38px;
+}
+
+#media-block{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#login-sell{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+    height: 100%;
+}
+
+#searchbar{
+    display: flex;
+    height: 40px;
+    width: 80%;
+}
+
+#searchbar input{
+    flex:1;
+    border:none;
+    outline: none;
+}
+
+#lentes{
+    width: 30px;
+    height: 30px;
+}
+
+input[type="text"]{
+    padding: 10px;
+}
+
+#searchbar button{
+    border: none;
+    background: white;
+    cursor: pointer;
+
+}
+
+#Sell-button{
+    display:flex;
+    padding: 8px 15px;
+    border: solid 1px white;
+    background: none;
+    color: white;
+    font-weight: 500;
+    font-size: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#Sell-button:hover{
+    background: rgb(34, 112, 112);
+}
+
+/* brands section */
+#brands{
+    padding: 20px 400px;
+    background: rgb(232, 231, 231);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#brands a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+}
+
+/* hero */
+#hero{
+    background-image: url("dunk\ april.jpeg");
+    background-size: cover;
+    background-position: top 50% right 0;
+    height: 70vh;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#scrollhand{
+    display: none;
+}
+
+#scrollhand img{
+    height: 150px;
+    width: 150px;
+}
+
+#text-shoes{
+    padding-top: 150px;
+    margin-left: -700px;
+    font-size: 57px;
+    font-weight: bolder;
+    color: aliceblue;
+}
+
+#three-button{
+    display: flex;
+    flex-direction: row;
+    width: 67px;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#three-button button{
+    display: flex;
+    padding: 5px;
+    border-radius: 7px;
+    cursor: pointer;
+    border: solid 0.1px white;
+}
+
+#three-button button:hover{
+    background: rgb(183, 255, 0);
+}
+
+.disabled{
+    background: grey;
+}
+
+.enabled{
+    background: darkgreen;
+}
+
+
+/*product1 featured and latest*/
+#product1{
+    padding-top: 50px;
+    text-align: start;
+}
+
+#product1 h1{
+    margin-left: 150px;
+}
+
+#product1 .pro{
+    width: 25%;
+    min-width: 300px;
+    padding: 10px 12px;
+    cursor: pointer;
+}
+
+#proimg{
+    width: 100%;
+}
+
+.pro .desc{
+    text-align: center;
+}
+
+#p-name{
+    font-size: 14px;
+}
+
+#price1{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#product1 .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 100px;
+       
+}
+
+
+#product1 .pro-container{
+    overflow-x: auto;
+ }
+
+/* footer */
+#footer{
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    background: rgb(12, 12, 59);
+    color: aliceblue;
+    padding: 50px 0;
+}
+
+/* css per script */
+#LG{
+    transition: all 0.6s;
+}
+
+.LGstop { 
+    background: url("login-icon.png");
+    background-size:contain;
+    background-repeat:no-repeat;
+  }
+  
+.LGgo {
+    background: url("login-icon-js.png");
+    background-size:contain;
+    background-repeat:no-repeat;
+}
+
+/* css per image slider*/
+#hero2{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.wrapper{
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    cursor: pointer;
+    scroll-behavior: 0.5s smooth;
+}
+
+.wrapper::-webkit-scrollbar{
+   display:  none;
+}
+
+.slider{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  scroll-snap-align: start;
+  background-color: black;
+}
+
+#slideimage{
+    width: 100vw;
+    height: 70vh;
+    object-fit: cover;
+    object-position: top 50% right 0;
+}
+
+#textshoe{
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    font-size: 57px;
+    font-weight: 700;
+    color: aliceblue;
+    user-select: none;
+}
+
+#tre-buttons{
+    display: flex;
+    flex-direction: row;
+    width: 67px;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 5%;
+}
+
+
+#tre-buttons button{
+    display: flex;
+    padding: 5px;
+    border-radius: 7px;
+    cursor: pointer;
+    border: solid 0.1px white; 
+}
+
+#tre-buttons button:hover{
+    background: rgb(183, 255, 0);
+}
+
+
+/* media query */
+@media(max-width: 1300px){
+
+    #brands{
+        padding:20px 200px;
+    }
+
+}
+
+@media (max-width: 1195px){
+
+    #text-shoes{
+        margin-left: -350px;
+    }
+
+    #header{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    #product1 .pro-container{
+        padding: 0 50px;
+    }
+
+    #product1 h1{
+        margin-left: 50px;
+    }
+
+    #three-button{
+        display: none;
+    }
+
+    #tre-buttons{
+        display: none;
+    }
+
+    #slideimage{
+        width: 100vw;
+        height: 50vh;
+        object-fit: cover;
+        object-position: top 90% right 50%;
+    }
+
+    #hero{
+        background-position: top 90% right 50%;
+        height: 60vh;
+        position: relative;
+    }
+
+    #scrollhand{
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    #tre-buttons{
+        display: none;
+    }
+
+}
+
+@media (max-width: 810px){
+    #brands{
+        overflow-x: auto;
+    }
+}
+
+@media (max-width:999px) {
+    #brands{
+        padding:20px 0;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    #brands a{
+        padding-right: 50px;
+        padding-left: 10px;
+    }
+    .container{
+        display: none;
+    }
+
+    #header{
+        padding-left: 10px;
+        padding-right: 10px;
+        justify-content: space-between;
+    }
+
+    #SH{
+        height: 50px;
+        width: 250px;
+    }
+
+    #tendina{
+        display: flex;
+        cursor: pointer;
+    }
+
+    #ham{
+        height: 40px;
+        width: 60px;
+    }
+
+    #brands{
+        padding:20px 50px;
+    }
+
+    #hero{
+        height: 50vh;
+    }
+
+    #slideimage{
+        width: 100vw;
+        height: 50vh;
+        object-fit: cover;
+        object-position: top 90% right 50%;
+    }
+}
+
+@media (max-width: 850px) {
+    
+    #hero{
+        background-image: url("dunk april.jpeg");
+        height: 50vh;
+        margin-top: 50px;
+        background-size: cover;
+        background-position: top 90% right 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #text-shoes{
+        margin-left: -150px;
+    }
+
+    #textshoe{
+        font-size: 45px;
+    }
+}
+@media (max-width: 620px) {
+    #text-shoes{
+        font-size: 2.5rem;
+        padding-top: 50px;
+        margin-left: 0;
+        font-weight: bolder;
+        color: aliceblue;
+    }  
+
+    #textshoe{
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 500px) {
+    
+    #header{
+        padding: 0;
+    }
+
+
+    #hero{
+        background-image: url("dunk april.jpeg");
+        height: 30vh;
+        margin-top: 50px;
+        background-size: cover;
+        background-position: top 90% right 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #slideimage{
+        width: 100vw;
+        height: 30vh;
+        object-fit: cover;
+        object-position: top 90% right 50%;
+    }
+
+    
+
+    #product1 .pro{
+        min-width: 180px;
+        padding: 0;
+    }
+
+    #product1 .pro-container{
+        padding: 0 20px;
+    }
+
+    #brands a{
+        font-size: 0.85rem;
+    }
+
+    #ham{
+        height: 25px;
+        width: 40px;
+    }
+
+    #Sell-button{
+        display:flex;
+        padding: 6px 6px;
+        border: solid 1px white;
+        background: none;
+        color: white;
+        font-weight: 500;
+        font-size: 11px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    #SH{
+        height: 38px;
+        width: 190px;
+    }
+
+    #LG{
+        height: 25px;
+        width: 25px;
+        position: absolute;
+        right: 2px;
+        top:0;
+    }
+
+    #product1 h1{
+        margin-left: 10px;
+    }
+
+    #brands{
+        padding:10px 30px;
+    }
+
+    #login-sell{
+        display:flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-right: 20px;
+        position: relative;
+    }
+
+    .hamburger{
+        height: 22px;
+        width: 22px;
+        padding-right: 29px;
+    }
+
+    #scrollhand img{
+        height: 80px;
+        width: 80px;
+    }
+
+    #product1 .pro{
+        min-width: 150px;
+    }
+
+    #textshoe{
+        font-size: 25px;
+    }
+
+}
+
+@media (max-width: 320px) {
+    #SH{
+        display: none;
+    }
+    
+    #SH-piccolo{
+        display: block;
+        height: 40px;
+        width: 45px;
+    }
+
+    #product1 .pro{
+        min-width: 110px;
+    }
+}
+
+
+
+
+
+
+
+
+
